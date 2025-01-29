@@ -13,9 +13,11 @@ import numpy as np
 
 # Initialisation du bot avec le token
 
-TOKEN = '7929008625:AAG_HRlrb7eHIo9RYLj-aiBRfs8rfeGC-Nw'
-bot = telebot.TeleBot(TOKEN)
+# Récupérer le TOKEN de la variable d'environnement
+TOKEN = os.getenv("TOKEN_BOT")
 
+# Créer le bot avec le TOKEN
+bot = telebot.TeleBot(TOKEN)
 
 # Définir les données de la montante globalement
 montante_data = {
